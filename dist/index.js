@@ -1247,11 +1247,10 @@ function getMergeMethod(
   }
 
   switch (mergeCustomBehavior) {
-    case "tada-server": return tadaServerBehavior(pullRequest);
-    case "tada-web": return tadaWebBehavior(pullRequest);
-  }
-  if (mergeCustomBehavior === "tada-server") {
-    return tadaServerBehavior(pullRequest);
+    case "tada-server":
+      return tadaServerBehavior(pullRequest);
+    case "tada-web":
+      return tadaWebBehavior(pullRequest);
   }
   return defaultMergeMethod;
 }
